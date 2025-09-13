@@ -1,12 +1,10 @@
 import pandas as pd
+import seaborn as sns
 
-df1 = pd.DataFrame({
-    #'date' : ['2025-09-13', '2025-09-13', '2025-09-14', '2025-09-15'],
-    'date' : ['2025-09-13', '2025-09-13', '2025-09-14', '2025-09-14'],
-    'city' : ['Seoul', 'Incheon', 'Seoul', 'Incheon'],
-    'temp' : [25, 24, 27, 24]
-})
-print(df1)
-df2 = df1.pivot(index='date', columns='city', values='temp')
-print()
-print(df2)
+df = sns.load_dataset('mpg')
+print(df)
+df = df.drop(columns=['name', 'cylinders'])
+# df_asc = df.sort_values('mpg')
+# print(df_asc)
+df_desc = df.sort_values('mpg', ascending=False)
+print(df_desc)
