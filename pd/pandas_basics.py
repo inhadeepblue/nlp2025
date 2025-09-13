@@ -1,22 +1,12 @@
-import numpy as np
 import pandas as pd
 
-# df1 = pd.DataFrame(
-#     {"id": [100, 102, 107],
-#      "math" : [99, 100, 97],
-#      "english" : [95, 92, 94]
-#      }, index=[1, 2, 3]
-# )
-# print(df1)
-df2 = pd.DataFrame(
-    [
-        [100, 99, 95],
-        [102, 100, 92],
-        [107, 97, 94],
-    ], columns=["id", "math", "english"], index=[1, 2, 3]
-)
+df1 = pd.DataFrame({
+    #'date' : ['2025-09-13', '2025-09-13', '2025-09-14', '2025-09-15'],
+    'date' : ['2025-09-13', '2025-09-13', '2025-09-14', '2025-09-14'],
+    'city' : ['Seoul', 'Incheon', 'Seoul', 'Incheon'],
+    'temp' : [25, 24, 27, 24]
+})
+print(df1)
+df2 = df1.pivot(index='date', columns='city', values='temp')
+print()
 print(df2)
-# df3 = pd.melt(df2)
-# df3 = pd.melt(df2).rename(columns={'variable':'var', 'value':'val'})
-df3 = pd.melt(df2).rename(columns={'variable':'var', 'value':'val'}).query('val > 95')
-print(df3)
