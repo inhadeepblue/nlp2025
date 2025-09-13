@@ -1,10 +1,16 @@
 import numpy as np
 
-o = np.arange(1, 13)
+m = np.array([4, 25, 9, 16])
+print(np.sqrt(m))
+print(np.exp(m))
+print(np.log(m))
+n = np.array([0, np.pi/2, np.pi])
+print(n)
+print(np.sin(n))
+print(np.cos(n))
 
-# r = o.reshape(2, 2, 3)
-r = o.reshape(4, 3)
-print(o)
+r = m.reshape(2, 2)
 print(r)
-f = r.flatten()
-print(f)
+# t = r.transpose()
+t = r.T
+print(t)
