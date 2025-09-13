@@ -1,10 +1,10 @@
 import numpy as np
 
-a = np.arange(1, 6)
+o = np.arange(1, 13)
 
-mask = a > 2
-print(a[mask])
-
-# result = np.where(a > 3, a, a**2)
-result = np.where(a > 3, a, 0)
-print(result)
+# r = o.reshape(2, 2, 3)
+r = o.reshape(4, 3)
+print(o)
+print(r)
+f = r.flatten()
+print(f)
