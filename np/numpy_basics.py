@@ -1,19 +1,17 @@
 import numpy as np
 
-array = np.arange(1, 6)
-print(array)
+# np.random.seed(50)
 
-print(array[0])
-print(array[4], array[-1])
+x = np.random.random(5)
+print(x)
+y = np.random.randint(1, 7, 5)
+print(y)
+z = np.random.normal(50, 10, 5)
+print(z)
+# q = np.arange(1, 6)
+# choice = np.random.choice(q, 3)
+# print(choice)
 
-print(array[1:4], array[1:-1])
-print(array[::2])
-
-arr2d = np.array(
-    [
-        [1, 2, 3],
-        [4, 5, 6]
-    ]
-)
-print(arr2d[0, 1])
-print(arr2d[:, 1])
+q = np.array(["가위", "바위", "보"])
+choice = np.random.choice(q, 2)
+print(choice)
