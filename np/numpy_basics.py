@@ -1,20 +1,19 @@
 import numpy as np
 
-array = np.array(
+array = np.arange(1, 6)
+print(array)
+
+print(array[0])
+print(array[4], array[-1])
+
+print(array[1:4], array[1:-1])
+print(array[::2])
+
+arr2d = np.array(
     [
-        [
-            [3, 2, 1],
-            [4, 5, 6]
-        ],
-        [
-            [9, 2, 31],
-            [4, 15, -6]
-        ]
+        [1, 2, 3],
+        [4, 5, 6]
     ]
 )
-print(array[1, 0, 2])
-print(array.shape)
-print(array.ndim)
-print(array.size)
-print(array.dtype)
-print(array)
+print(arr2d[0, 1])
+print(arr2d[:, 1])
