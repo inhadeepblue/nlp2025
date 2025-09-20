@@ -1,11 +1,11 @@
 import pandas as pd
-import seaborn as sns
 
-# print(sns.get_dataset_names())
-titanic = sns.load_dataset('titanic')
-print(titanic)
-print(titanic[['sibsp', 'parch', 'fare']])
+df1 = pd.read_csv('bike_rentals.csv')
+# print(df1.info())
+# print(df1.describe())
+# print(df1.describe(include='object'))
 
-print(titanic[titanic.age > 70])
-print(titanic.sample(n=7))
-print(titanic.nlargest(4, 'age'))
+df2 = pd.read_csv('Bookings.csv')
+print(df2.info())
+print(df2.describe())
+print(df2.describe(include='object'))
